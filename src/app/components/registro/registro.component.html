@@ -1,0 +1,37 @@
+<main class="container mt-5">
+
+        <div>
+            <div class="alert alert-success text-center" role="alert" *ngIf="!registro">
+                <h4 class="alert-heading">Cargando...</h4>
+                <p>
+                    <i class="fa fa-refresh fa-3x fa-spin" aria-hidden="true"></i>
+                </p>
+            </div>
+            <div *ngIf="registro" class="animated slideInLeft">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>DNI</th>
+                            <th>Direccion</th>
+                            <th>Foto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let r of registro">
+                            <td>{{r.id}}</td>
+                            <td>{{r.rg_name}}</td>
+                            <td>{{r.rg_lastn}}</td>
+                            <td>{{r.rg_dni}}</td>
+                            <td>{{r.rg_direc}</td>
+                            <td>{{r.rg_img}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+        </div>
+    
+    </main>
